@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>300x250_MedRect_MeineWEN</title>
+    <link rel="stylesheet" href="https://use.typekit.net/nah4qqc.css">
+    <script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.2.4_min.js"></script>
+    <script src="SplitText.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 300px;
+            height: 250px;
+            cursor: pointer;
+        }
+
+        #animation-container {
+
+            width: 100%;
+            height: 100%;
+            background-color: #eee;
+            overflow: hidden;
+            padding: 10%;
+            position: relative;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+        }
+
+        h2 {
+            line-height: 1.5rem;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 55%;
+            z-index: 1000;
+            transform: 100% 0%;
+        }
+
+        .cta {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 60%;
+        }
+
+        .rete {
+            width: 100%;
+            position: absolute;
+            bottom: 1%;
+            /* font-size: 1vh; */
+            font-size: 6px;
+
+            z-index: 1000;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-family: ff-meta-web-pro, sans-serif;
+            margin-left: -10%;
+            text-shadow: #00000090 0 0 3px;
+        }
+
+        .urlPos {
+            position: absolute;
+            left: 7%;
+            top: 75px;
+            z-index: 10;
+            transform-origin: 0 50%;
+        }
+
+        .urlPos img {
+            margin-top: 5px;
+            width: 78%;
+        }
+
+        .wen_schraeg {
+            transform: skew(0deg, -5deg);
+            font-family: ff-meta-web-pro, sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            color: white;
+            hyphens: none;
+        }
+
+
+
+        .url,
+        .fix {
+            /* font-size: 3.5vh;
+            line-height: 3.5vh; */
+            /* font-size: 3.5vh;
+            line-height: 3.5vh; */
+            font-size: 1.4rem;
+            line-height: 1.5rem;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .fix {
+            text-align: center;
+            margin-left: -15px;
+        }
+
+        .url {
+            display: none;
+
+        }
+
+        .bilder-unten {
+            width: 101%;
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .stoerer {
+            z-index: 999;
+            position: absolute;
+            top: 25%;
+            left: 3%;
+            width: 45%;
+        }
+
+
+
+        #persona-bild {
+            z-index: 0;
+        }
+
+
+        img {
+            width: 100%;
+        }
+
+        #hg-blau {
+            z-index: 1;
+            width: 105%;
+            transform-origin: left bottom;
+        }
+
+
+        .hg-1 {
+            width: 103%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            z-index: 5;
+        }
+
+        #meine-url {
+            font-weight: 600;
+        }
+    </style>
+
+    <!-- Adform API Script -->
+    <script type="text/javascript">
+        document.write('<script src="' + (window.API_URL || 'https://s1.adform.net/banners/scripts/rmb/Adform.DHTML.js?bv=' + Math.random()) + '"><\/script>');
+    </script>
+
+    <!--#dynAdsHelper.head:dynAdsHelper/globalhead-->
+    <script src="https://s1.adform.net/banners/scripts/components/Adform.DynAdsHelper-2.js"></script>
+</head>
+
+<body>
+    <div id="animation-container">
+        <div class="logo">
+            <img src="assets/img/WEN_Logo.png">
+        </div>
+        <div class="cta">
+            <img src="assets/img/meineWEN-cta.png">
+        </div>
+        <div class="rete">
+            <p>Hierbei handelt es sich um ein Service der Wien Energie GmbH und Wien Energie Vertrieb GmbH & Co KG.</p>
+        </div>
+        <div class="urlPos">
+            <h2 class="wen_schraeg fix">Mein Kundenportal:</h2>
+            <h2 class="wen_schraeg url">meine<span id="meine-url"></span>.wienenergie.at</h2>
+            <img src="assets/img/meineWEN-unterstrich.png">
+        </div>
+        <div class="hg-1">
+            <img src="assets/img/HG_orange.png">
+        </div>
+        <div class="stoerer">
+            <img src="assets/img/Damir_stoerer_1.png" id="persona-stoerer">
+        </div>
+
+        <div class="bilder-unten">
+            <img src="assets/img/0010012004_Meine_Wien_Energie_Personas_300x250_0720_RZ.png" id="persona-bild">
+        </div>
+        <div class="bilder-unten">
+            <img src="assets/img/HG_blau.png" id="hg-blau">
+        </div>
+
+
+
+    </div>
+
+    <script>
+        
+        // Adding clicktag from the spreadsheet
+        // document.querySelector('#animation-container').onclick = function () {
+        //     window.open(dhtml.getVar('clickTAG'), '_blank');
+        // }
+        // // getVar() method because we need to add line breaks If we use the addText() Method it will ignore html tags
+        // Adform.DynAdsHelper.getVar('Headline', function (value) {
+        //     document.querySelector('#meine-url').innerHTML = value;
+        // });
+        // // addImage() Method for replacing background image + stoerer
+        // Adform.DynAdsHelper.addImage('persona-bild', 'Bild');
+        // Adform.DynAdsHelper.addImage('persona-stoerer', 'Stoerer');
+
+        // Splitting spans in order to type them afterwards
+        let mySplitText = new SplitText('#dyn_1_1', { type: "chars", charsClass: "yourCharClass" });
+        let mySplitText2 = new SplitText('#dyn_1_2', { type: "chars", charsClass: "yourCharClass2" });
+        let mySplitText3 = new SplitText('#dyn_1_3', { type: "chars", charsClass: "yourCharClass3" });
+        let mySplitText4 = new SplitText('#dyn_1_4', { type: "chars", charsClass: "yourCharClass4" });
+      
+        // Animation starts:
+        let tl = gsap.timeline({ repeat: 1, repeatDelay: 2 });
+        let tl2 = gsap.timeline({});
+        
+        tl.to('.fix', { opacity: 0, duration: .3 }, 2)
+            .set('.fix', { display: 'none' })
+            .set('.url', { display: 'block' })
+            .from('.url', { opacity: 0, duration: .3 })
+            .from('.urlPos img', { opacity: 0, duration: .3 }, "-=.3")
+            .to('.urlPos img', { opacity: 0, duration: .3 }, "+=.7")
+            .from('#meine-url', { display: "none", duration: .5 }, "-=.2")
+            .from('.yourCharClass', { display: "none", stagger: .05 }, "-=.5")
+            .from('#br_1', { display: "none", duration: .01 }, "-=.5")
+            .from('.yourCharClass2', { display: "none", stagger: .05 }, "-=.5")
+            .from('#br_2', { display: "none", duration: .01 }, "-=.5")
+            .from('.yourCharClass3', { display: "none", stagger: .05 }, "-=.5")
+            .from('#br_3', { display: "none", duration: .01 }, "-=.5")
+            .to('.urlPos', { opacity: 0, duration: .3 }, "+=1")
+            .to('.hg-1', { y: "-=400", duration: 1 }, "-=.25")
+            .to('#hg-blau', { y: "+=150", duration: 1 }, "-=1")
+            .from('.stoerer', { opacity: 0 , scale: 2, duration:.2 }, "-=.75")
+            .to('.cta', { scale: 1.1, duration: .3 }, "+=.5")
+            .to('.cta', { scale: 1, duration: .3 })
+            .to('.cta', { scale: 1.1, duration: .3 }, "+=.5")
+            .to('.cta', { scale: 1, duration: .3 });
+        tl2.to('.hg-1', { y: "+=400", duration: 1 }, 22)
+            .to('#hg-blau', { y: "-=150", duration: 1 }, "-=1")
+            .to('.stoerer', { opacity: 0 })
+            .set('#meine-url', { display: "none"})
+            .to('.urlPos', { opacity: 1 })
+            .set('.url', { display: 'block' })
+            .to('.urlPos img', { opacity: 1, duration: .3 })
+            .to('.url', { opacity: 1, duration: .3 })
+    </script>
+
+</body>
+
+</html>

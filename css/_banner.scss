@@ -1,0 +1,153 @@
+.proj-img.banner {
+    #animation-container {
+
+        width: 300px;
+        height: 250px;
+        background-color: #eee;
+        overflow: hidden;
+        padding: 10%;
+        position: relative;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+
+    h2 {
+        line-height: 1.5rem;
+    }
+
+    .logo {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 55%;
+        z-index: 1000;
+        transform: 100% 0%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .cta {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        width: 60%;
+        img {
+            width:100%;
+        }
+    }
+
+    .urlPos {
+        position: absolute;
+        left: 7%;
+        top: 75px;
+        z-index: 10;
+        transform-origin: 0 50%;
+    }
+
+    .urlPos img {
+        margin-top: 5px;
+        width: 78%;
+    }
+
+    .wen_schraeg {
+        transform: skew(0deg, -5deg);
+        font-family: ff-meta-web-pro, sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        color: white;
+        hyphens: none;
+    }
+
+
+
+    .url,
+    .fix {
+        /* font-size: 3.5vh;
+        line-height: 3.5vh; */
+        /* font-size: 3.5vh;
+        line-height: 3.5vh; */
+        font-size: 1.4rem;
+        line-height: 1.5rem;
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .fix {
+        text-align: center;
+        margin-left: -15px;
+    }
+
+    .url {
+        display: none;
+
+    }
+
+    .bilder-unten {
+        width: 101%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        img {
+            width: 100%;
+        }
+    }
+
+    .stoerer {
+        z-index: 999;
+        position: absolute;
+        top: 21%;
+        left: 3%;
+        width: 45%;
+        img {
+            width: 100%;
+        }
+    }
+
+
+
+    #persona-bild {
+        z-index: 0;
+        height: 100%;
+    }
+
+
+    img {
+        width: 100%;
+    }
+
+    #hg-blau-banner {
+        z-index: 1;
+        width: 105%;
+        transform-origin: left bottom;
+    }
+
+
+    .hg-1 {
+        width: 103%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        z-index: 5;
+    }
+
+    #meine-url {
+        font-weight: 600;
+    }
+}
