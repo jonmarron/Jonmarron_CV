@@ -1,3 +1,4 @@
+let dictionary = []; // die array daten werden in die angehängte lang.js dazu kommen
 document.addEventListener('DOMContentLoaded', function () {
     
     // declare and assign variables
@@ -8,6 +9,62 @@ document.addEventListener('DOMContentLoaded', function () {
         separators = Array.from(document.querySelectorAll('.j-sep')),
         containerChildren = Array.from(document.querySelectorAll('.container div:not(:last-child)'));
     
+
+    // Set language of the site
+    // Function to insert the translated text
+    const changeLanguage = function(language) {
+
+        let allElements = Array.from(document.querySelectorAll('[data-multilang]'));
+        console.log('you chose ' + language);
+        for(let i of allElements) {
+            
+            let attr = i.getAttribute('data-multilang');
+            i.innerHTML = dictionary[language][attr];
+        }
+    }
+    // functions to trigger insertion and change the language select buttons
+    const langEN = () => {
+        // document.querySelector('.lang #spanish').style.display = 'flex';
+        // document.querySelector('.lang #english').style.display = 'none';
+        // document.querySelector('.lang #deutsch').style.display = 'flex';
+        changeLanguage('EN');
+    }
+    const langES = () => {
+        // document.querySelector('.lang #spanish').style.display = 'none';
+        // document.querySelector('.lang #english').style.display = 'flex';
+        // document.querySelector('.lang #deutsch').style.display = 'flex';
+        changeLanguage('ES');
+    }
+    const langDE = () => {
+        // document.querySelector('.lang #spanish').style.display = 'flex';
+        // document.querySelector('.lang #english').style.display = 'flex';
+        // document.querySelector('.lang #deutsch').style.display = 'none';
+        changeLanguage('DE');
+    }
+    // Check navigator language and adapt the site
+    if(navigator.language.includes('en')) {
+        langEN();
+    } else if(navigator.language.includes('es')) {
+        langES();
+    } else if(navigator.language.includes('de')) {
+        langDE();
+    } else {
+        langEN();
+    }
+    // Event Listeners to language select buttons
+    // document.querySelector('#spanish').addEventListener('click', function(){
+    //     langES();
+    // });
+    
+    document.querySelector('#english').addEventListener('click', function(){
+        langEN();
+    });
+    
+    document.querySelector('#deutsch').addEventListener('click', function(){
+        langDE();
+    });
+
+
     // show or hide menu bar when clicking the burger menu
     burger.addEventListener('click', function () {
         mobMenu.classList.toggle('show');

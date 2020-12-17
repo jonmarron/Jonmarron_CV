@@ -1,0 +1,54 @@
+.project {
+    height:400px;
+    position: relative;
+    overflow: hidden;
+    margin: 30px 0;
+    video {
+        position: absolute;
+        top:50%;left:50%;
+        transform: translateY(-45%) translateX(-50%);
+        width:110%;
+        height:auto;
+        opacity:.3;
+    }
+    .video-overlay {
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+        position: absolute;
+        top:0;left:0;
+        width:100%;
+        height:100%;
+        .client-name {
+            font-weight: 100;
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+            margin: 0;
+        }
+        .proj-name {
+
+            margin: 10px 0;
+        }
+        p {
+            margin:0;
+        }
+        .rights {
+            font-size: .7rem;
+            font-style: italic;
+            a {
+                transition: .4s ease-in-out;
+                box-shadow: inset 0 -1px $accent;
+                &:hover {
+                    box-shadow: inset 0 -20px $accent;
+                    color: $dark;
+
+                }
+            }
+        }
+        button {
+            margin-top: 75px;
+        }
+    }
+}

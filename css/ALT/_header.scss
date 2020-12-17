@@ -1,0 +1,60 @@
+// HEADER start
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding-top: 156px;
+    height:85vh;
+    .intro {
+        width: 55%;
+    }
+    .header-img {
+        width: 40%;
+        height: 80vh;
+        overflow-y: hidden;
+        display: flex;
+        align-items: center;
+        transform: translateX(20px);
+        img {
+            width:100%;
+        }
+    }
+    .intro {
+        .social {
+            ul {
+                list-style: none;
+                display:flex;
+                padding:0;
+                li{
+                    margin-right: .8rem;
+                    font-weight: 100;
+                    padding:8px 0;
+                    a{
+                        transition: .3s ease-in-out;
+                        &:hover {
+                            color: $accent;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+// HEADER end
+
+@media (max-width: 992px) {
+   
+
+   
+    
+}
+@media (max-width: 768px) {    
+  
+    
+}
+@media (max-width: 576px) {    
+  
+    
+}
