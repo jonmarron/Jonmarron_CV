@@ -308,6 +308,25 @@ header .intro .social ul li a:hover {
     margin-bottom: 50px;
   }
 }
+.proj-head {
+  width: 100%;
+  margin-top: 100px;
+  position: relative;
+}
+.proj-head .play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  z-index: 9999;
+}
+.proj-head video {
+  width: 100%;
+  height: auto;
+}
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -372,9 +391,9 @@ p.descr {
 }
 
 button {
-  padding: 12px 10px;
+  padding: 12px 12px;
   background: transparent;
-  width: 100px;
+  width: auto;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   letter-spacing: 0.2rem;

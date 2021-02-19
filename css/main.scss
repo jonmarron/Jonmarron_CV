@@ -4,6 +4,7 @@
 @import 'experience';
 @import 'projects';
 @import 'about';
+@import 'sal';
 
 
 
@@ -66,9 +67,9 @@ p {
 }
 
 button {
-    padding: 12px 10px;
+    padding: 12px 12px;
     background: transparent;
-    width: 100px;
+    width: auto;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     letter-spacing: .2rem;

@@ -1,0 +1,17 @@
+.proj-head {
+    width: 100%;    
+    margin-top: 100px;
+    position: relative;
+    .play-button {
+        position: absolute;
+        top:50%; left:50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-shadow: 0 0 10px rgba(0, 0, 0, .3);
+        cursor:pointer;
+        z-index: 9999;
+    }
+    video {
+        width:100%;
+        height:auto;
+    }
+}
