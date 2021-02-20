@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
             modalDiv.style.display = 'none';
         }
         document.querySelector('.modal-close').addEventListener('click', closeModal);
-
+        document.querySelector('.modal .background').addEventListener('click', closeModal);
 
     }
 
