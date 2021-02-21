@@ -162,8 +162,20 @@ document.addEventListener('DOMContentLoaded', function () {
     let salBtn = document.querySelector('#SAL-modal');
     let salModal = `<video src="assets/videos/SAL_film.mp4" controls></video>
     <i class="fas fa-times modal-close"></i>`;
+
+
     let aniBtn = document.querySelector('#ANI-modal');
     let aniModal = `<video src="assets/videos/Anima_Mentis_Website_Relaunch_Video.mp4" controls></video>
+    <i class="fas fa-times modal-close"></i>`;
+
+
+    let htbBtn = document.querySelector('#HTB-modal');
+    let htbModal = ` <img src="assets/SJ_Hartner_Brot_Packaging-1.jpg" alt="">
+    <i class="fas fa-times modal-close"></i>`;
+
+
+    let wenBtn = document.querySelector('#WEN-modal');
+    let wenModal = `<video src="assets/videos/WEN_infoscreen.mp4" controls></video>
     <i class="fas fa-times modal-close"></i>`;
 
     const closeModalActivate = () => {
@@ -185,6 +197,18 @@ document.addEventListener('DOMContentLoaded', function () {
     aniBtn.addEventListener('click', function () {
         console.log('clicked');
         modalContent.innerHTML = aniModal;
+        modalDiv.style.display = 'flex';
+        closeModalActivate();
+    })
+    htbBtn.addEventListener('click', function () {
+        console.log('clicked');
+        modalContent.innerHTML = htbModal;
+        modalDiv.style.display = 'flex';
+        closeModalActivate();
+    })
+    wenBtn.addEventListener('click', function () {
+        console.log('clicked');
+        modalContent.innerHTML = wenModal;
         modalDiv.style.display = 'flex';
         closeModalActivate();
     })

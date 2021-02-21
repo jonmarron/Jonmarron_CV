@@ -20,6 +20,13 @@
         height:auto;
         opacity:.3;
     }
+    img {
+        width:100%;
+        position: absolute;
+        top:50%;left:50%;
+        transform: translateY(-45%) translateX(-50%);
+        opacity:.3;
+    }
     .video-overlay {
         display:flex;
         flex-direction:column;
@@ -64,6 +71,52 @@
         button {
             cursor: pointer;
             margin: 75px 10px 0 10px;
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+   
+
+   
+    
+}
+@media (max-width: 768px) {    
+    .project {
+        height:auto;
+        width:100%;
+        margin: 0 auto;
+        &.odd, &.even {
+            flex-direction: column;
+            align-items: center;
+            .text {
+                height: auto;
+                width: 100%;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+            .proj-img {
+                width: 100%;
+                height:50%;
+                display: flex;
+            }
+        }
+        
+    }
+    
+}
+@media (max-width: 576px) {    
+    .project {
+        height:90vw;
+        video, img {
+            width:200%;
+        }
+        .proj-img {
+            height:50%;
+            img {
+                height:90%;
+            }
         }
     }
 }

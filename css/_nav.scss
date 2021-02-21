@@ -72,7 +72,7 @@ nav {
     nav {
         .navbar {
             .brand {
-                width:40%;
+                width:50%;
             }
         }
     }
@@ -80,11 +80,18 @@ nav {
     
 }
 @media (max-width: 768px) {    
+    .burger {
+        display:block;
+        opacity: .8;
+        cursor: pointer;
+        position: relative;
+        
+    }
+    .mobBR{
+        display:inline;
+    }
     nav {
         .navbar{
-            .brand {
-                width: auto;
-            }
             .menu{
                 position: absolute;
                 right: -90%;
@@ -96,8 +103,6 @@ nav {
                 bottom:0;
                 height:100vh;
                 transition: .5s ease-in-out;
-                display: flex;
-                flex-direction: column;
                 &.show {
                     right:0;
                 }
@@ -110,12 +115,12 @@ nav {
                         &#mail, &#tel {
                             display:block;
                         }
-                        
                     }
                     
                 }
             }
         }
+    
     }
     
 }

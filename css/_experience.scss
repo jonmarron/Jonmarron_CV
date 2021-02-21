@@ -50,10 +50,24 @@
     
 }
 @media (max-width: 768px) {    
-  
+    .exp {
+        .jobs{
+            .job{
+            width: 45%;
+            }
+        }
+        
+    }
     
 }
 @media (max-width: 576px) {    
-  
+    .exp {
+        .jobs{
+            .job{
+            width: 90%;
+            }
+        }
+        
+    }
     
 }

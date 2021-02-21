@@ -42,6 +42,35 @@ header {
         }
     }
 }
+.scroll-cta {
+    overflow: hidden;
+    margin-top:50px;
+    display:flex;
+    height:60px;
+    justify-content: center;
+    transition: 1s ease-in-out;
+    color: $accent;
+    i {
+        animation: fade-in-out 2s ease-in-out infinite;
+    }
+    &.hidden {
+        height:0;
+        opacity:0;
+    }
+}
+@keyframes fade-in-out  {
+    0%,10% {
+        transform: translateY(-8px);
+        opacity:0;
+    }
+    60% {
+        opacity:1;
+    }
+    90%,100% {
+        transform: translateY(16px);
+        opacity:0;
+    }
+}
 // HEADER end
 @media (max-width: 992px) {
    
@@ -54,6 +83,23 @@ header {
     
 }
 @media (max-width: 576px) {    
-  
+    header {
+        height: 70vh;
+        .intro {
+            width: 90%;
+            z-index: 1;
+        }
+        .header-img {
+            width:80%;
+            height: 100%;
+            position: absolute;
+            z-index: 0;
+            right: -1%;
+            img {
+                opacity: .3;
+
+            }
+        }
+    }
     
 }
