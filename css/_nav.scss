@@ -92,6 +92,9 @@ nav {
     }
     nav {
         .navbar{
+            .brand {
+                font-size: 12px;
+            }
             .menu{
                 position: absolute;
                 right: -90%;

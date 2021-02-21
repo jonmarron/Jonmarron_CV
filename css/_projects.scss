@@ -37,21 +37,25 @@
         top:0;left:0;
         width:100%;
         height:100%;
+        text-align: center;
         .client-name {
+            text-align: center;
             font-weight: 100;
             text-transform: uppercase;
             letter-spacing: .3rem;
             margin: 0;
         }
         .proj-name {
-
+            text-align: center;
             margin: 10px 0;
         }
         p {
+            text-align: center;
             margin:0;
             font-size: .7rem;
         }
         .rights {
+            text-align: center;
             font-style: italic;
             a {
                 transition: .4s ease-in-out;
@@ -109,13 +113,29 @@
 @media (max-width: 576px) {    
     .project {
         height:90vw;
-        video, img {
+        video {
             width:200%;
+        }
+        img {
+            height: 100%;
         }
         .proj-img {
             height:50%;
             img {
                 height:90%;
+            }
+        }
+        .video-overlay{
+
+            .case-links {
+                display:flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+            button {
+                cursor: pointer;
+                margin-top: 20px;
             }
         }
     }

@@ -81,6 +81,9 @@ nav.scrolled {
     display: inline;
   }
 
+  nav .navbar .brand {
+    font-size: 12px;
+  }
   nav .navbar .menu {
     position: absolute;
     right: -90%;
@@ -115,6 +118,10 @@ header {
   position: relative;
   padding-top: 156px;
   height: 85vh;
+}
+header #jump {
+  font-size: 12px;
+  font-style: italic;
 }
 header .intro {
   width: 55%;
@@ -291,21 +298,26 @@ header .intro .social ul li a:hover {
   left: 0;
   width: 100%;
   height: 100%;
+  text-align: center;
 }
 .project .video-overlay .client-name {
+  text-align: center;
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
   margin: 0;
 }
 .project .video-overlay .proj-name {
+  text-align: center;
   margin: 10px 0;
 }
 .project .video-overlay p {
+  text-align: center;
   margin: 0;
   font-size: 0.7rem;
 }
 .project .video-overlay .rights {
+  text-align: center;
   font-style: italic;
 }
 .project .video-overlay .rights a {
@@ -352,14 +364,27 @@ header .intro .social ul li a:hover {
   .project {
     height: 90vw;
   }
-  .project video, .project img {
+  .project video {
     width: 200%;
+  }
+  .project img {
+    height: 100%;
   }
   .project .proj-img {
     height: 50%;
   }
   .project .proj-img img {
     height: 90%;
+  }
+  .project .video-overlay .case-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .project .video-overlay button {
+    cursor: pointer;
+    margin-top: 20px;
   }
 }
 .cv {
@@ -433,6 +458,10 @@ header .intro .social ul li a:hover {
   .me {
     margin-bottom: 50px;
   }
+
+  .skills {
+    margin-top: 50px;
+  }
 }
 .proj-head {
   width: 100%;
@@ -491,6 +520,23 @@ header .intro .social ul li a:hover {
   z-index: -1;
 }
 
+@media (max-width: 768px) {
+  .modal .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .modal .content video, .modal .content img {
+    margin-right: 0;
+    width: 100%;
+    height: auto;
+    outline: none;
+  }
+  .modal i {
+    display: none;
+  }
+}
 footer {
   z-index: 9999;
   padding: 20px 0;
@@ -570,7 +616,7 @@ p.descr {
 }
 
 .underline {
-  box-shadow: inset 0 -2px #c4d8fd;
+  box-shadow: inset 0 -1px #c4d8fd;
   transition: 0.4s ease-in-out;
 }
 .underline:hover {

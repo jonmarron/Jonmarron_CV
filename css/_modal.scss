@@ -34,3 +34,31 @@
         z-index: -1;
     }
 }
+@media (max-width: 992px) {
+    
+}
+@media (max-width: 768px) {    
+   .modal{
+
+       .content {
+           width: 100%;
+           display: flex;
+           justify-content: center;
+           align-items: flex-start;
+           video, img {
+               margin-right: 0;
+               width: 100%;
+               height:auto;
+               outline:none;
+           }
+       }
+       i {
+           display:none;
+       }
+   }
+    
+}
+@media (max-width: 576px) {    
+    
+    
+}
