@@ -92,6 +92,13 @@ header {
         .intro {
             width: 90%;
             z-index: 1;
+            h1 {
+                font-size: 25px; 
+             }
+             p  {
+                 font-size: 12px;
+                 line-height: 17px;
+             }
         }
         .header-img {
             width:80%;
