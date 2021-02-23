@@ -9,62 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
         separators = Array.from(document.querySelectorAll('.j-sep')),
         containerChildren = Array.from(document.querySelectorAll('.container div:not(:last-child)'));
 
-
-    // // Set language of the site
-    // // Function to insert the translated text
-    // const changeLanguage = function (language) {
-
-    //     let allElements = Array.from(document.querySelectorAll('[data-multilang]'));
-    //     console.log('you chose ' + language);
-    //     for (let i of allElements) {
-
-    //         let attr = i.getAttribute('data-multilang');
-    //         i.innerHTML = dictionary[language][attr];
-    //     }
-    // }
-    // // functions to trigger insertion and change the language select buttons
-    // const langEN = () => {
-    //     // document.querySelector('.lang #spanish').style.display = 'flex';
-    //     // document.querySelector('.lang #english').style.display = 'none';
-    //     // document.querySelector('.lang #deutsch').style.display = 'flex';
-    //     changeLanguage('EN');
-    // }
-    // const langES = () => {
-    //     // document.querySelector('.lang #spanish').style.display = 'none';
-    //     // document.querySelector('.lang #english').style.display = 'flex';
-    //     // document.querySelector('.lang #deutsch').style.display = 'flex';
-    //     changeLanguage('ES');
-    // }
-    // const langDE = () => {
-    //     // document.querySelector('.lang #spanish').style.display = 'flex';
-    //     // document.querySelector('.lang #english').style.display = 'flex';
-    //     // document.querySelector('.lang #deutsch').style.display = 'none';
-    //     changeLanguage('DE');
-    // }
-    // // Check navigator language and adapt the site
-    // if (navigator.language.includes('en')) {
-    //     langEN();
-    // } else if (navigator.language.includes('es')) {
-    //     langES();
-    // } else if (navigator.language.includes('de')) {
-    //     langDE();
-    // } else {
-    //     langEN();
-    // }
-    // // Event Listeners to language select buttons
-    // // document.querySelector('#spanish').addEventListener('click', function(){
-    // //     langES();
-    // // });
-
-    // document.querySelector('#english').addEventListener('click', function () {
-    //     langEN();
-    // });
-
-    // document.querySelector('#deutsch').addEventListener('click', function () {
-    //     langDE();
-    // });
-
-
     // show or hide menu bar when clicking the burger menu
     burger.addEventListener('click', function () {
         mobMenu.classList.toggle('show');
@@ -204,43 +148,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     salBtn.addEventListener('click', function () {
-        console.log('clicked');
         modalContent.innerHTML = salModal;
         modalDiv.style.display = 'flex';
         closeModalActivate();
     })
     aniBtn.addEventListener('click', function () {
-        console.log('clicked');
         modalContent.innerHTML = aniModal;
         modalDiv.style.display = 'flex';
         closeModalActivate();
     })
     ani2Btn.addEventListener('click', function () {
-        console.log('clicked');
         modalContent.innerHTML = ani2Modal;
         modalDiv.style.display = 'flex';
         closeModalActivate();
     })
     htbBtn.addEventListener('click', function () {
-        console.log('clicked');
         modalContent.innerHTML = htbModal;
         modalDiv.style.display = 'flex';
         closeModalActivate();
     })
     wenBtn.addEventListener('click', function () {
-        console.log('clicked');
         modalContent.innerHTML = wenModal;
         modalDiv.style.display = 'flex';
         closeModalActivate();
     })
     wen2Btn.addEventListener('click', function () {
-        console.log('clicked');
         modalContent.innerHTML = wen2Modal;
         modalDiv.style.display = 'flex';
         closeModalActivate();
     })
     unqBtn.addEventListener('click', function () {
-        console.log('clicked');
         modalContent.innerHTML = unqModal;
         modalDiv.style.display = 'flex';
         closeModalActivate();
