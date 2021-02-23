@@ -192,6 +192,13 @@ header .intro .social ul li a:hover {
     width: 90%;
     z-index: 1;
   }
+  header .intro h1 {
+    font-size: 25px;
+  }
+  header .intro p {
+    font-size: 12px;
+    line-height: 17px;
+  }
   header .header-img {
     width: 80%;
     height: 100%;
@@ -362,7 +369,7 @@ header .intro .social ul li a:hover {
 }
 @media (max-width: 576px) {
   .project {
-    height: 90vw;
+    height: 110vw;
   }
   .project video {
     width: 200%;

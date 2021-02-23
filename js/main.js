@@ -160,12 +160,12 @@ document.addEventListener('DOMContentLoaded', function () {
     let modalContent = document.querySelector('.modal .content');
 
     let salBtn = document.querySelector('#SAL-modal');
-    let salModal = `<video src="assets/videos/SAL_film.mp4" controls></video>
+    let salModal = `<video src="assets/videos/SAL_film.mp4" controls poster="assets/videos/SAL_film_poster.jpg"></video>
     <i class="fas fa-times modal-close"></i>`;
 
 
     let aniBtn = document.querySelector('#ANI-modal');
-    let aniModal = `<video src="assets/videos/Anima_Mentis_Website_Relaunch_Video.mp4" controls></video>
+    let aniModal = `<video src="assets/videos/ANI_film.mp4" controls poster="assets/videos/ANI_film_poster.jpg"></video>
     <i class="fas fa-times modal-close"></i>`;
 
 
@@ -175,7 +175,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     let wenBtn = document.querySelector('#WEN-modal');
-    let wenModal = `<video src="assets/videos/WEN_infoscreen.mp4" controls></video>
+    let wenModal = `<video src="assets/videos/WEN_infoscreen.mp4" controls poster="assets/videos/WEN_infoscreen_poster.jpg"></video>
+    <i class="fas fa-times modal-close"></i>`;
+
+
+    let wen2Btn = document.querySelector('#WEN2-modal');
+    let wen2Modal = `<video src="assets/videos/WEN_wetterbanner.mp4" controls poster="assets/videos/WEN_wetterbanner_poster.jpg"></video>
+    <i class="fas fa-times modal-close"></i>`;
+    
+    
+    let unqBtn = document.querySelector('#UNQ-modal');
+    let unqModal = `<video src="assets/videos/UNQ_preroll.mp4" controls poster="assets/videos/UNQ_PreRoll_poster0.jpg"></video>
     <i class="fas fa-times modal-close"></i>`;
 
     const closeModalActivate = () => {
@@ -209,6 +219,18 @@ document.addEventListener('DOMContentLoaded', function () {
     wenBtn.addEventListener('click', function () {
         console.log('clicked');
         modalContent.innerHTML = wenModal;
+        modalDiv.style.display = 'flex';
+        closeModalActivate();
+    })
+    wen2Btn.addEventListener('click', function () {
+        console.log('clicked');
+        modalContent.innerHTML = wen2Modal;
+        modalDiv.style.display = 'flex';
+        closeModalActivate();
+    })
+    unqBtn.addEventListener('click', function () {
+        console.log('clicked');
+        modalContent.innerHTML = unqModal;
         modalDiv.style.display = 'flex';
         closeModalActivate();
     })
